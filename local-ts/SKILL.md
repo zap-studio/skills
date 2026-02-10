@@ -1,36 +1,35 @@
 ---
 name: local-ts
-description: Guides setup and development workflows for the local.ts local-first starter kit.
+description: Use when starting or modifying apps based on the local.ts starter kit or its local-first desktop/mobile features.
 ---
 
 # local-ts
 
-This skill helps when creating or modifying apps based on the local.ts starter kit.
+## Overview
 
-## When to Use This Skill
+Local-first starter kit for desktop and mobile apps with Tauri, SQLite, and a React frontend.
 
-- You are starting a new app from the local.ts template
-- You are updating local.ts features (settings, tray, notifications, database, theming, logging, window state, autostart, splash)
-- You are troubleshooting local.ts dev workflows
+## When to Use
 
-## Workflow
+- Bootstrapping a new app from the local.ts template
+- Modifying built-in features like settings, tray, notifications, database, theming, logging, window state, autostart, or splash
+- Debugging local.ts development workflows
 
-1. Confirm prerequisites: Node.js v18+, Rust, and pnpm.
-2. Install dependencies with `pnpm install`.
-3. Run the desktop app in dev mode with `pnpm run tauri dev`.
-4. For changes that affect native behavior, keep Rust and Tauri config in sync with the frontend.
+## When Not to Use
 
-## Expectations
+- Building a web-only app without Tauri or local-first constraints
 
-- Keep local-first behavior intact and avoid introducing network dependencies into core flows.
-- Prefer small, reviewable changes and keep UI and native logic consistent.
-- Validate any config changes early so failures are loud and actionable.
+## Quick Reference
+
+- Install: `pnpm install`
+- Run: `pnpm run tauri dev`
+- Prereqs: Node.js v18+, Rust, pnpm
 
 ## Inputs to Request
 
-- Target platform(s): desktop, mobile, or both
-- Features to add or modify
-- Relevant error logs or reproduction steps
+- Target platforms (desktop, mobile, or both)
+- Features to add or change
+- Error logs or exact repro steps
 
 ## Resources
 

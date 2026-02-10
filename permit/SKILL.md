@@ -1,39 +1,37 @@
 ---
 name: permit
-description: Helps define and evaluate type-safe authorization policies using @zap-studio/permit.
+description: Use when defining authorization policies, resource/action permissions, or role hierarchies with @zap-studio/permit.
 ---
 
 # permit
 
-This skill focuses on modeling authorization policies and permission checks with `@zap-studio/permit`.
+## Overview
 
-## When to Use This Skill
+Type-safe, declarative authorization policies with Standard Schema-compatible resources.
 
-- You need declarative authorization policies
-- You want type-safe permission checks across resources and actions
-- You are composing policies or role hierarchies
+## When to Use
 
-## Workflow
+- Defining permissions for resources and actions
+- Modeling role hierarchies or composable access rules
+- Replacing ad-hoc `if` checks with auditable policy rules
 
-1. Define resource schemas compatible with Standard Schema.
-2. Define actions per resource using typed `Actions`.
-3. Create a policy with `createPolicy`, using `allow`, `deny`, and `when` rules.
-4. Compose conditions with `and`, `or`, and `not` where needed.
-5. Use `policy.can(ctx, action, resourceName, resource)` to evaluate permissions.
-6. If combining multiple policies, choose `mergePolicies` (deny-overrides) or `mergePoliciesAny` (allow-overrides).
+## When Not to Use
 
-## Expectations
+- Simple apps with a single hardcoded allow/deny check
 
-- Keep policies explicit and easy to audit.
-- Avoid hidden side effects in condition functions.
-- Prefer readable conditions and small, composable helpers.
+## Quick Reference
+
+- Policy: `createPolicy`
+- Rules: `allow`, `deny`, `when`
+- Conditions: `and`, `or`, `not`, `has`, `hasRole`
+- Evaluate: `policy.can(ctx, action, resourceName, resource)`
+- Merge: `mergePolicies` or `mergePoliciesAny`
 
 ## Inputs to Request
 
-- Resource types and their schemas
-- Action lists per resource
-- Context shape (user, role, tenancy, etc.)
-- Rules or edge cases that must be enforced
+- Resource schemas and action lists
+- Context shape (user, role, tenancy)
+- Required rules and edge cases
 
 ## Resources
 

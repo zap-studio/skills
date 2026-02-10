@@ -4,7 +4,7 @@ This repository contains agent skills for Zap Studio. Each skill lives in its ow
 
 ## Skills
 
-- `local-ts` — Local-first starter kit for desktop and mobile apps.
-- `permit` — Type-safe authorization policies and permission checks.
-- `validation` — Standard Schema validation utilities and error handling.
-- `fetch` — Typed fetch wrapper with Standard Schema validation.
+- `local-ts` — Use when working on the local.ts starter kit or its local-first app features.
+- `permit` — Use when defining authorization policies, resources, and actions.
+- `validation` — Use when validating data with Standard Schema-compatible schemas.
+- `fetch` — Use when building typed, schema-validated HTTP clients.

@@ -1,35 +1,35 @@
 ---
 name: fetch
-description: Helps build typed HTTP clients with @zap-studio/fetch and Standard Schema validation.
+description: Use when building typed HTTP clients with schema-validated responses or replacing unsafe fetch assertions.
 ---
 
 # fetch
 
-This skill focuses on type-safe HTTP requests validated with Standard Schema.
+## Overview
 
-## When to Use This Skill
+Type-safe `fetch` wrapper with Standard Schema validation and typed response inference.
 
-- You need type-safe API calls with runtime validation
-- You want to wrap `fetch` with a consistent, typed API
-- You are handling validation and network errors explicitly
+## When to Use
 
-## Workflow
+- Replacing `fetch` calls that rely on `as` type assertions
+- Validating API responses at runtime with Standard Schema
+- Standardizing request methods and error handling
 
-1. Define Standard Schema-compatible schemas for API responses.
-2. Use the `api` client to make requests such as `api.get(url, schema)`.
-3. Handle `ValidationError` for schema failures and `FetchError` for network issues.
-4. For shared configuration, create a pre-configured client using the factory helpers.
+## When Not to Use
 
-## Expectations
+- You do not control or validate any API responses
 
-- Avoid unsafe `as` assertions for response typing.
-- Validate all external data at the boundary.
-- Keep error handling explicit and context-rich.
+## Quick Reference
+
+- Client: `api`
+- Request: `api.get(url, schema)` (also `post`, `put`, `patch`, `delete`)
+- Errors: `FetchError`, `ValidationError`
+- Factory: create a configured client for shared base URL/auth
 
 ## Inputs to Request
 
-- Base URL and auth requirements
-- Expected response schemas
+- Base URL and auth details
+- Response schemas and expected types
 - Error handling preferences
 - Required HTTP methods
 

@@ -1,36 +1,36 @@
 ---
 name: validation
-description: Guides Standard Schema validation flows with @zap-studio/validation.
+description: Use when validating data with Standard Schema-compatible schemas or handling ValidationError results.
 ---
 
 # validation
 
-This skill helps normalize schema validation across Standard Schema-compatible libraries.
+## Overview
 
-## When to Use This Skill
+Standard Schema helpers for consistent validation and error handling across Zod, Valibot, ArkType, and others.
 
-- You are validating input or API payloads with Standard Schema-compatible schemas
-- You need a consistent error type across Zod, Valibot, ArkType, etc.
-- You want a single validation path for sync and async schemas
+## When to Use
 
-## Workflow
+- Validating inputs or API payloads with Standard Schema-compatible schemas
+- Normalizing sync and async validation paths
+- Handling a single `ValidationError` type across schema libraries
 
-1. Check schemas with `isStandardSchema` before validation.
-2. Use `standardValidate` for normalized async or sync validation.
-3. Catch `ValidationError` for structured issues when using throwing mode.
-4. Use `createSyncStandardValidator` only for schemas that are strictly sync.
+## When Not to Use
 
-## Expectations
+- You only need simple, ad-hoc checks without schema validation
 
-- Prefer the shared `ValidationError` type for error handling.
-- Keep validation boundary logic centralized.
-- Treat `allowSubdomains: false` as a best-effort guard when using email validation.
+## Quick Reference
+
+- Guard: `isStandardSchema`
+- Validate: `standardValidate`
+- Sync only: `createSyncStandardValidator`
+- Error: `ValidationError`
 
 ## Inputs to Request
 
-- Schema library (Zod, Valibot, ArkType, etc.)
-- Whether validation should throw or return issues
-- Expected error handling behavior
+- Schema library in use (Zod, Valibot, ArkType)
+- Throwing vs non-throwing validation
+- Desired error shape and handling
 
 ## Resources
 
