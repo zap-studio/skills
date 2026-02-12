@@ -8,3 +8,4 @@ This repository contains agent skills for Zap Studio. Each skill lives in its ow
 - `permit` — Use when defining authorization policies, resources, and actions.
 - `validation` — Use when validating data with Standard Schema-compatible schemas.
 - `fetch` — Use when building typed, schema-validated HTTP clients.
+- `uaa` — Use when working with the Universal Architecture Application specification.
