@@ -98,10 +98,10 @@ Each feature exposes one entrypoint. It starts a span, calls services, emits eve
 
 ## Canonical Structures
 
-All shells hook into `/src` so the core layers stay the same.
+All shells live inside `/src`, and teams should document which directories belong to the framework shell so the reusable core stays clear.
 
-- **Next.js**: the `app` directory is the shell and can sit at the root or inside `src/app` ([Next.js docs](https://nextjs.org/docs/app/building-your-application/routing)). `/src` holds features, services, state, components, observability, and primitives.
-- **TanStack Start**: routing lives in `src/routes` and `src/router.tsx`, with `/src` keeping the shared layers ([TanStack Start docs](https://tanstack.com/start/latest/docs/framework/react/guide/routing)).
+- **Next.js**: the `app` directory is the shell inside `/src` (like `src/app`), and the remaining `/src` folders hold features, services, state, components, observability, and primitives ([Next.js docs](https://nextjs.org/docs/app/building-your-application/routing)).
+- **TanStack Start**: routing lives in `src/routes` and `src/router.tsx`, while the rest of `/src` keeps the shared core layers ([TanStack Start docs](https://tanstack.com/start/latest/docs/framework/react/guide/routing)).
 - **Web server**: `/server/routes` is the shell; `/src` keeps framework-neutral logic.
 - **Expo**: `/app/screens` is the shell; `/src` keeps shared logic.
 - **CLI**: `/commands` is the shell; `/src` keeps domain logic and observability helpers.
