@@ -130,19 +130,11 @@ Component render
 
 ## Design Goals
 
-- Full execution visibility
-- Cross-surface traceability
-- Structured logging
-- Event-driven extensibility
-- Compliance readiness
+We aim for full execution visibility, cross-surface traceability, structured logging, event-driven extensibility, and compliance readiness so teams can observe, evolve, and trust the system over time.
 
 ## Anti-Patterns
 
-- Logging only in the shell
-- Not passing trace information
-- Logging business events as strings
-- Metrics inside components
-- Tying observability to one framework
+Avoid placing metrics inside components, logging only in the shell, skipping trace propagation, treating business events as plain strings, or tying observability to a single framework—each move breaks the layer boundaries.
 
 ## Summary
 
