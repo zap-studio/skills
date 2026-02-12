@@ -4,11 +4,11 @@ description: Universal Architecture Application (UAA) specification
 ---
 # Universal Architecture Application (UAA)
 
-This skill explains the UAA playbook in simple terms. It focuses on the layers that keep domains reusable and the rare cases where a capability truly touches every layer.
+This skill explains the UAA playbook in simple words. It shows why architecturing apps well keeps projects healthy, and it focuses on the layers that keep domain logic reusable even when teams move fast with AI or vibecoding.
 
 ## Purpose
 
-UAA helps teams build apps across web, mobile, CLI, desktop, servers, and workers. The goal is to keep data, business rules, state, and features shared, while letting each framework handle routing and parsing.
+UAA helps teams build apps across web, mobile, CLI, desktop, servers, and workers. The goal is to keep data, business rules, state, and features shared, while letting each framework handle routing and parsing. Many teams end up with a messy stack because they keep vibecoding and do not spend time on architecture. UAA tries to fix that by keeping a clear core that lasts longer even when AI lets you ship features fast.
 
 ## Core Principles
 
