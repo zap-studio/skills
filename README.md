@@ -4,8 +4,52 @@ This repository contains agent skills for Zap Studio. Each skill lives in its ow
 
 ## Skills
 
-- `local-ts` — Use when working on the local.ts starter kit or its local-first app features.
-- `permit` — Use when defining authorization policies, resources, and actions.
-- `validation` — Use when validating data with Standard Schema-compatible schemas.
-- `fetch` — Use when building typed, schema-validated HTTP clients.
-- `uaa` — Use when working with the Universal Architecture Application specification.
+### `local-ts`
+
+Use when working on the Local.ts starter kit.
+
+Install:
+
+```
+npx skills add https://github.com/zap-studio/skills --skill local-ts
+```
+
+### `permit`
+
+Use when defining authorization policies, resources, and actions.
+
+Install:
+
+```
+npx skills add https://github.com/zap-studio/skills --skill permit
+```
+
+### `validation`
+
+Use when validating data with Standard Schema-compatible schemas.
+
+Install:
+
+```
+npx skills add https://github.com/zap-studio/skills --skill validation
+```
+
+### `fetch`
+
+Use when building typed, schema-validated HTTP clients.
+
+Install:
+
+```
+npx skills add https://github.com/zap-studio/skills --skill fetch
+```
+
+### `uaa`
+
+Use when working with the Universal Architecture Application specification.
+
+Install:
+
+```
+npx skills add https://github.com/zap-studio/skills --skill uaa
+```
